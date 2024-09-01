@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Yearbook App</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Yearbook</h1>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- User Profile Section -->
+    <section id="profile">
+        <h2>User Profile</h2>
+        <form id="profileForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="grade" placeholder="Your Grade">
+
+            <label for="profilePic">Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic">
+
+            <button type="submit">Save Profile</button>
+        </form>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <input type="file" id="photoUpload" name="photoUpload" multiple>
+        <button type="button" onclick="uploadPhotos()">Upload Photos</button>
+
+        <div class="photo-album">
+            <!-- Photos will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories">
+        <h2>Memories</h2>
+        <form id="memoryForm">
+            <textarea id="memoryText" name="memoryText" placeholder="Write your memory here..."></textarea>
+            <button type="submit">Add Memory</button>
+        </form>
+
+        <div class="memories-list">
+            <!-- Memories will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings">
+        <h2>Settings</h2>
+        <form id="settingsForm">
+            <label for="theme">Choose Theme:</label>
+            <select id="theme" name="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <label for="notifications">Notifications:</label>
+            <input type="checkbox" id="notifications" name="notifications">
+
+            <button type="submit">Save Settings</button>
+        </form>
+    </section>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

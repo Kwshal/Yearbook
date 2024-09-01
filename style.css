@@ -1,0 +1,107 @@
+:root {
+    --background: #fff;
+    --foreground: #333;
+    --border: 1px dashed #ccc;
+    --background-light: #fafafa;
+    --background-dark: #f5f5f5;
+    --max-width: 800px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #555;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: sans-serif;
+    line-height: 1.5;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+section {
+    border: var(--border);
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--background-light);
+}
+
+#profile, #gallery, #memories, #settings {
+    display: grid;
+    grid-gap: 1em;
+}
+
+#gallery {
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+}
+
+#gallery img {
+    width: 100%;
+}
+
+#memories {
+    grid-template-columns: 1fr;
+}
+
+#memories-list {
+    display: grid;
+    grid-gap: 0.5em;
+    background-color: var(--background-dark);
+}
+
+#memories-list > * {
+    border: var(--border);
+    padding: 0.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* add this */
+}
+
+nav h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+input, button {
+    border: var(--border);
+}
+
+button {
+    background-color: var(--background);
+    color: var(--foreground);
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+

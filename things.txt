@@ -1,0 +1,5 @@
+    --bluish:    #034c65;
+    --pinkish:   #ef8c86;
+    --orangish:  #fcb677;
+    --purplish:  #685268;
+    --violetish: #2f1f2b;
